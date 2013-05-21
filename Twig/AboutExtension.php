@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * Twig Extension - AboutmagicBundle
  * Has a dependency to the apache intl module
  */
-class BaseExtension extends \Twig_Extension implements ContainerAwareInterface
+class AboutExtension extends \Twig_Extension implements ContainerAwareInterface
 {
     /**
      * @var \Symfony\Component\DependencyInjection\ContainerInterface
