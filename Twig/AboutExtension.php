@@ -102,7 +102,7 @@ class AboutExtension extends \Twig_Extension implements ContainerAwareInterface
     
     	// TODO: Hacer configurable desde fuente
     
-    	$dir = $this->get('kernel')->getRootDir() . "/../web/profiles/";
+    	$dir = $this->container->get('kernel')->getRootDir() . "/../web/profiles/";
     	if (!file_exists($dir)) mkdir($dir);
     	$file = $dir . md5($url) . ".jpg";
     	if (!file_exists($file) || (time() - filemtime($file) > ($ops['cache_time']  + rand(0,1000)))) {
