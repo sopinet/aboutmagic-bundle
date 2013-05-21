@@ -1,0 +1,25 @@
+{
+    "name": "sopinet/aboutmagic-bundle",
+    "version": "0.0.1",
+    "description": "About.me integration for Symfony2",
+    "keywords": ["bootstrap","about"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Fernando Hidalgo",
+            "email": "fhidalgo@sopinet.com",
+            "homepage": "http://sopinet.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+        "sopinet/bootstrap-extend-bundle": "dev-master",
+    },
+    "autoload": {
+        "psr-0": { "Sopinet\\AboutMagicBundle": "" }
+    },
+    "target-dir": "Sopinet/AboutMagicBundle"
+}

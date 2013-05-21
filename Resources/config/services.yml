@@ -1,0 +1,6 @@
+services:
+    sopinet.twig.aboutmagic_extension:
+        class: Sopinet\AboutmagicBundle\Twig\AboutExtension
+        arguments: ['@service_container']
+        tags:
+            - { name: twig.extension }

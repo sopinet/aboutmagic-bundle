@@ -1,0 +1,22 @@
+{% set prodata = profiles|renderAbout() %}
+
+{% for (data in prodata) %}
+	<li class="span4">
+        <a target="_blank" href="{{ data['profile'] }}">
+          <figure class="thumbnail-figure">
+            <img alt="{{ data['user_name'] }}" src="{{ asset(data['avatarOK']) }}" />
+            <figcaption class="thumbnail-title">
+              <h3>
+                <span>{{ data['first_name'] }}</span>
+              </h3>
+              <p>
+                <span>{{ data['last_name'] }}</span>
+              </p>
+            </figcaption>
+          </figure>
+        </a>
+        <p>
+          {{ data['header'] }}
+        </p>
+	</li>
+{% endfor %}
