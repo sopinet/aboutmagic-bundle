@@ -136,8 +136,7 @@ class AboutExtension extends \Twig_Extension implements ContainerAwareInterface
 	
 	public function renderAbout($nicknames)
 	{
-		//echo $this->container->parameters['sopinet_aboutmagic.key'];
-		//exit();
+		$ops['about_key'] = $this->container->getParameter('sopinet_aboutmagic.key');
 		$ops['cache_time'] = 3600;
 		$profiles = explode(",",$nicknames);
 		$i = 0;
@@ -146,15 +145,7 @@ class AboutExtension extends \Twig_Extension implements ContainerAwareInterface
 			$profiles_data[$i]['avatarOK'] = $this->getAvatar($profiles_data[$i], $ops);
 			$i++;
 		}
-		return $profiles_data;		
-		/*
-		$em = $this->container->get('doctrine')->getManager();
-		$reR = $em->getRepository('QuestformeBaseBundle:Rules');
-		$rule = $reR->findOneBy(array('answer' => $answer, 'suggest' => $suggest));
-		
-		if ($rule == null) return "";
-		else return $rule->getPower();
-		*/
+		return $profiles_data;
 	}
     
     public function getName()

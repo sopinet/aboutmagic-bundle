@@ -44,6 +44,7 @@ class SopinetAboutmagicExtension extends Extension implements PrependExtensionIn
     	$configs = $container->getExtensionConfig($this->getAlias());
     	$config = $this->processConfiguration(new Configuration(), $configs);
     	
+    	$container->setParameter('sopinet_aboutmagic.key', $config['key']);
     	// Add anything?
     }    
     
