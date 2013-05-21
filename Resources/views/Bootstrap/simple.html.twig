@@ -1,7 +1,58 @@
 {% set prodata = profiles|renderAbout() %}
 
-{% for (data in prodata) %}
-	<li class="span4">
+<style>
+/* thumbnail figures */
+.thumbnail-figure {
+  margin: 0 0 24px;
+  position: relative;
+  background: #333333;
+}
+.thumbnail-figure img {
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.thumbnail-figure img:hover {
+  opacity: .4;
+}
+
+.thumbnail-title {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -30px;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.thumbnail-title span {
+  display: inline-block;
+  background: white;
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  padding: 5px 10px;
+  text-shadow: 1px 1px 1px white;
+  margin-top: 1px;
+}
+
+.inactive .thumbnail-figure img {
+  opacity: .4;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+.inactive .thumbnail-title {
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+.inactive a {
+  cursor: default;
+}
+</style>
+
+<ul class="thumbnails bordered thumbnail-list">
+{% for data in prodata %}
+	<li class="span{{ size }}">
         <a target="_blank" href="{{ data['profile'] }}">
           <figure class="thumbnail-figure">
             <img alt="{{ data['user_name'] }}" src="{{ asset(data['avatarOK']) }}" />
@@ -20,3 +71,4 @@
         </p>
 	</li>
 {% endfor %}
+</ul>
