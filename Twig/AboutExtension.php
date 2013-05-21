@@ -136,7 +136,8 @@ class AboutExtension extends \Twig_Extension implements ContainerAwareInterface
 	
 	public function renderAbout($nicknames)
 	{
-		$ops['about_key'] = "5cb93ad48874c0c5709fdf0b37343e9da3c7f30f";
+		//echo $this->container->parameters['sopinet_aboutmagic.key'];
+		//exit();
 		$ops['cache_time'] = 3600;
 		$profiles = explode(",",$nicknames);
 		$i = 0;

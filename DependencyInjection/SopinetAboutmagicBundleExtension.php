@@ -1,6 +1,6 @@
 <?php
 /**
-* This file is part of SopinetBootstrapExtendBundle.
+* This file is part of SopinetAboutmagicBundle.
 *
 * (c) 2013 by Fernando Hidalgo - Sopinet
 */
@@ -27,11 +27,28 @@ class SopinetAboutmagicExtension extends Extension implements PrependExtensionIn
     {
         $configuration = new Configuration();
         $this->processConfiguration($configuration, $configs);
-
 		$loader = new Loader\YamlFileLoader(
 			$container,
 			new FileLocator(__DIR__.'/../Resources/config')
 		);
 		$loader->load('services.yml');
+    }
+    
+    /**
+     * {@inheritDoc}
+     */
+    public function prepend(ContainerBuilder $container)
+    {
+    	$bundles = $container->getParameter('kernel.bundles');
+    
+    	$configs = $container->getExtensionConfig($this->getAlias());
+    	$config = $this->processConfiguration(new Configuration(), $configs);
+    	
+    	// Add anything?
+    }    
+    
+    public function getAlias()
+    {
+        return 'sopinet_aboutmagic';
     }
 }
