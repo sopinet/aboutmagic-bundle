@@ -16,7 +16,7 @@
         "php": ">=5.3.3"
     },
     "require-dev": {
-        "sopinet/bootstrap-extend-bundle": "dev-master",
+        "sopinet/bootstrap-extend-bundle": "dev-master"
     },
     "autoload": {
         "psr-0": { "Sopinet\\AboutMagicBundle": "" }
