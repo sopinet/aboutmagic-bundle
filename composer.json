@@ -19,7 +19,7 @@
         "sopinet/bootstrap-extend-bundle": "dev-master"
     },
     "autoload": {
-        "psr-0": { "Sopinet\\AboutMagicBundle": "" }
+        "psr-0": { "Sopinet\\AboutmagicBundle": "" }
     },
-    "target-dir": "Sopinet/AboutMagicBundle"
+    "target-dir": "Sopinet/AboutmagicBundle"
 }

@@ -5,10 +5,10 @@
 * (c) 2013 by Fernando Hidalgo - Sopinet
 */
 
-namespace Sopinet\AboutMagicBundle;
+namespace Sopinet\AboutmagicBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-class SopinetAboutMagicBundle extends Bundle
+class SopinetAboutmagicBundle extends Bundle
 {
 }
