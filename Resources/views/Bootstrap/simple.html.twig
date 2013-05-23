@@ -50,7 +50,8 @@
 }
 </style>
 
-<ul class="thumbnails bordered thumbnail-list">
+<ul class="thumbnails bordered thumbnail-list row-fluid">
+{% set i = 0 %}
 {% for data in prodata %}
 	<li class="span{{ size }}">
         <a target="_blank" href="{{ data['profile'] }}">
@@ -70,5 +71,10 @@
           {{ data['header'] }}
         </p>
 	</li>
+	{% set i = i + size %}
+	{% if i >= size %}
+		</ul>
+		<ul class="thumbnails bordered thumbnail-list row-fluid">
+	{% endif %}	
 {% endfor %}
 </ul>
