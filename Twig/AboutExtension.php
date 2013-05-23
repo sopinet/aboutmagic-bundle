@@ -141,9 +141,12 @@ class AboutExtension extends \Twig_Extension implements ContainerAwareInterface
 		$profiles = explode(",",$nicknames);
 		$i = 0;
 		foreach($profiles as $pro) {
-			$profiles_data[$i] = $this->processProfile($pro, $ops);
-			$profiles_data[$i]['avatarOK'] = $this->getAvatar($profiles_data[$i], $ops);
-			$i++;
+			$temp_ok = $this->processProfile($pro, $ops);
+			if ($temp_ok['first_name'] != "") {
+				$profiles_data[$i] = $this->processProfile($pro, $ops);
+				$profiles_data[$i]['avatarOK'] = $this->getAvatar($profiles_data[$i], $ops);
+				$i++;
+			}
 		}
 		return $profiles_data;
 	}

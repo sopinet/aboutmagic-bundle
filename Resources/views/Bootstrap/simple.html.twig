@@ -72,7 +72,8 @@
         </p>
 	</li>
 	{% set i = i + size %}
-	{% if i >= size %}
+	{% if i >= 12 %}
+		{% set i = 0 %}
 		</ul>
 		<ul class="thumbnails bordered thumbnail-list row-fluid">
 	{% endif %}	
