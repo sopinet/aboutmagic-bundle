@@ -6,6 +6,11 @@ What is it?
 
 Integrate easy and fast, about.me profiles in your Symfony2 project
 
+Pre-requisites
+--------------
+
+- CurlInit: You must have curl_init function enabled in your server
+
 
 Installation via composer
 -------------------------
