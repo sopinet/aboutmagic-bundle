@@ -1,10 +1,17 @@
 Sopinet: Aboutmagic-Bundle
 ==========================
 
-What is it?
+What it is?
 -----------
 
 Integrate easy and fast, about.me profiles in your Symfony2 project
+
+But... what it is?
+------------------
+
+Aboutmagic show so the about.me profiles information
+
+![Preview of list](https://github.com/sopinet/aboutmagic-bundle/raw/master/doc/screenshot.png)
 
 Pre-requisites
 --------------
