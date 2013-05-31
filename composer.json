@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=5.3.3",
+        "sopinet/aboutmagic": "dev-master"
     },
     "require-dev": {
         "sopinet/bootstrap-extend-bundle": "dev-master"
