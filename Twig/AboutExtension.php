@@ -5,6 +5,7 @@ namespace Sopinet\AboutmagicBundle\Twig;
 use Symfony\Component\Locale\Locale;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Sopinet\Aboutmagic\AboutMagicService;
 
 /**
  * Twig Extension - AboutmagicBundle
