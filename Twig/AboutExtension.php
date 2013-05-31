@@ -45,6 +45,7 @@ class AboutExtension extends \Twig_Extension implements ContainerAwareInterface
 		$ops['about_key'] = $this->container->getParameter('sopinet_aboutmagic.key');
 		$ops['cache_time'] = 3600;
 		$ops['dir'] = $this->container->get('kernel')->getRootDir() . "/../web/profiles/";
+		$ops['out_images'] = "profiles/";
 		
 		$aboutmagicservice = new AboutMagicService();
 		return $aboutmagicservice->getProfiles($nicknames, $ops);
