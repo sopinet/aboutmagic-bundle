@@ -46,6 +46,7 @@ class AboutExtension extends \Twig_Extension implements ContainerAwareInterface
 		$ops['cache_time'] = 14400;
 		$ops['dir'] = $this->container->get('kernel')->getRootDir() . "/../web/profiles/";
 		$ops['out_images'] = "profiles/";
+		$ops['fx'] = "gray";
 		
 		$aboutmagicservice = new AboutMagicService();
 		return $aboutmagicservice->getProfiles($nicknames, $ops);
